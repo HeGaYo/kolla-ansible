@@ -5,7 +5,7 @@
     common_options: "{{ docker_common_options }}"
     image: "{{ haproxy_image_full }}"
     name: "haproxy"
-    privileged: True
+    privileged: True #特权模式 
     volumes:
       - "{{ node_config_directory }}/haproxy/:{{ container_config_directory }}/:ro"
       - "/etc/localtime:/etc/localtime:ro"
